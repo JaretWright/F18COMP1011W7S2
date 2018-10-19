@@ -11,10 +11,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 
 import java.net.URL;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class EditPhoneViewController implements Initializable {
+public class EditPhoneViewController implements Initializable, ControllerClass {
 
     @FXML
     private Label makeLabel;

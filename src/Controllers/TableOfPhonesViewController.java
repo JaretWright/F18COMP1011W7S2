@@ -2,6 +2,7 @@ package Controllers;
 
 import Models.DBConnect;
 import Models.MobilePhone;
+import Views.SceneChanger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -56,21 +57,7 @@ public class TableOfPhonesViewController implements Initializable {
         MobilePhone phone = tableView.getSelectionModel().getSelectedItem();
         if (phone != null)
         {
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("../Views/EditPhoneView.fxml"));
-            Parent root = loader.load();
-
-            Scene tableViewScene = new Scene(root);
-
-            //access the controller and call a method
-            EditPhoneViewController controller = loader.getController();
-            controller.loadPhone(phone);
-
-            //This line gets the Stage information
-            Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-
-            stage.setScene(tableViewScene);
-            stage.show();
+            SceneChanger.changeScenes(event,"EditPhoneView.fxml", "Phone Details", phone);
         }
     }
 }
