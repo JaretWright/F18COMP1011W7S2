@@ -17,13 +17,16 @@ import java.util.ResourceBundle;
 public class EditPhoneViewController implements Initializable {
 
     @FXML
-    private ChoiceBox<String> makeChoiceBox;
+    private Label makeLabel;
 
     @FXML
-    private TextField modelTextField;
+    private Label modelLabel;
 
     @FXML
-    private ChoiceBox<String> osChoiceBox;
+    private Label memoryLabel;
+
+    @FXML
+    private Label osLabel;
 
 
 
@@ -45,6 +48,9 @@ public class EditPhoneViewController implements Initializable {
 
     public void updateView()
     {
-        
+        makeLabel.setText(activePhone.getMake());
+        modelLabel.setText(activePhone.getModel());
+        memoryLabel.setText(String.format("%.0f", activePhone.getMemory()));
+        osLabel.setText(activePhone.getOs());
     }
 }

@@ -56,19 +56,19 @@
                         <Button mnemonicParsing="false" text="Back" />
                      </children>
                         </HBox>
-                  <Label text="Label" GridPane.columnIndex="1">
+                  <Label fx:id="makeLabel" text="Label" GridPane.columnIndex="1">
                      <font>
                         <Font size="18.0" />
                      </font></Label>
-                  <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Label fx:id="modelLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
                         <Font size="18.0" />
                      </font></Label>
-                  <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <Label fx:id="osLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <font>
                         <Font size="18.0" />
                      </font></Label>
-                  <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                  <Label fx:id="memoryLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <font>
                         <Font size="18.0" />
                      </font></Label>
